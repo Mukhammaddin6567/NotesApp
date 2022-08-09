@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="8dp"
+    android:elevation="8dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="?selectableItemBackground">
+
+        <View
+            android:id="@+id/noteLevel"
+            android:layout_width="4dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@color/black" />
+
+        <TextView
+            android:id="@+id/noteTimeDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/rubik_regular"
+            android:gravity="center"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/noteTitle"
+            app:layout_constraintStart_toEndOf="@id/noteLevel"
+            app:layout_constraintTop_toTopOf="@id/noteTitle"
+            tools:text="2022.05.21\n9.05 PM" />
+
+        <TextView
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/noteTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/open_sans_bold"
+            android:maxLines="2"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColor="@color/color_main"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/noteBookmark"
+            app:layout_constraintStart_toEndOf="@id/noteTimeDate"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/lorem/random" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/noteBookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:src="@drawable/ic_bookmark_default"
+            app:layout_constraintBottom_toBottomOf="@id/noteTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/noteTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.screen.AddNoteScreen">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#3930D8"
+        android:gravity="start|center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:gravity="center"
+            android:text="Add Note"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/buttonEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:src="@drawable/ic_check" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:textSize="12sp"
+        android:id="@+id/buttonTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="?selectableItemBackground"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="13.00 PM"
+        android:textColor="#82A0B7"
+        app:cornerRadius="8dp"
+        app:drawableStartCompat="@drawable/ic_time"
+        app:layout_constraintEnd_toStartOf="@id/buttonDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <TextView
+        android:textSize="12sp"
+        android:id="@+id/buttonDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="?selectableItemBackground"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="2022.05.21"
+        android:fontFamily="@font/open_sans_bold"
+        android:textColor="#82A0B7"
+        app:cornerRadius="8dp"
+        app:drawableStartCompat="@drawable/ic_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buttonTime"
+        app:layout_constraintTop_toTopOf="@id/buttonTime" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editTextTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/background_add_note"
+        android:fontFamily="@font/open_sans_regular"
+        android:hint="@string/text_note_hint"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/color_highlight_color"
+        android:textColorHint="#82A0B7"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/buttonTime" />
+
+
+    <org.wordpress.aztec.AztecText
+        android:id="@+id/visualEditor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:fontFamily="@font/open_sans_regular"
+        android:gravity="start"
+        android:hint="@string/text_editor_hint"
+        android:padding="8dp"
+        android:scrollbars="vertical"
+        android:textSize="16sp"
+        app:codeTextColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLevel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextTitle"
+        app:textColorHint="#82A0B7" />
+
+    <TextView
+        android:textSize="12sp"
+        android:drawablePadding="8dp"
+        android:id="@+id/buttonLevel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="?selectableItemBackground"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/text_less_important"
+        android:textColor="#82A0B7"
+        app:cornerRadius="8dp"
+        app:drawableStartCompat="@drawable/ic_circle_green"
+        app:layout_constraintBottom_toTopOf="@id/editorToolbar"
+        app:layout_constraintEnd_toStartOf="@id/buttonBookmark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/visualEditor" />
+
+    <TextView
+        android:textSize="12sp"
+        android:drawablePadding="8dp"
+        android:id="@+id/buttonBookmark"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="?selectableItemBackground"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/text_bookmark_add"
+        android:textColor="#82A0B7"
+        app:cornerRadius="8dp"
+        app:drawableStartCompat="@drawable/ic_bookmark_default"
+        app:layout_constraintBottom_toBottomOf="@id/buttonLevel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buttonLevel"
+        app:layout_constraintTop_toTopOf="@id/buttonLevel" />
+
+    <org.wordpress.aztec.toolbar.AztecToolbar
+        android:id="@+id/editorToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonLevel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

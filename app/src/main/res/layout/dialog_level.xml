@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_bottom_sheet_dialog"
+    android:gravity="center">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/line"
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/background_bottom_sheet_dialog_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="?android:selectableItemBackground"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/line">
+
+        <TextView
+            android:id="@+id/buttonLessImportant"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?selectableItemBackground"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:gravity="start|center"
+            android:padding="4dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/text_less_important"
+            android:textSize="16sp"
+            app:drawableStartCompat="@drawable/ic_circle_green" />
+
+        <TextView
+            android:id="@+id/buttonImportant"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="?selectableItemBackground"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:gravity="start|center"
+            android:padding="4dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/text_important"
+            android:textSize="16sp"
+            app:drawableStartCompat="@drawable/ic_circle_yellow" />
+
+        <TextView
+            android:id="@+id/buttonMoreImportant"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="?selectableItemBackground"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:gravity="start|center"
+            android:padding="4dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/text_more_important"
+            android:textSize="16sp"
+            app:drawableStartCompat="@drawable/ic_circle_red" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

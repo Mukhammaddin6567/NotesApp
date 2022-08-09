@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="text_menu_notes">Notes</string>
+    <string name="text_menu_groups">Groups</string>
+    <string name="text_menu_more">More</string>
+    <string name="text_groups_count">%1$d\nNotes</string>
+    <string name="text_time_date_header">%1$s, %2$s</string>
+    <string name="text_time_date_notes">%1$s\n%2$s</string>
+    <string name="text_current_time">%1$s.%2$s %3$s</string>
+    <string name="text_current_date">%1$d.%2$s.%3$s</string>
+    <string name="text_personal">Personal</string>
+    <string name="text_work">Work</string>
+    <string name="text_meeting">Meeting</string>
+    <string name="text_shopping">Shopping</string>
+    <string name="text_open">Open</string>
+    <string name="text_close">Close</string>
+    <string name="text_note_hint">Type title…</string>
+    <string name="text_editor_hint">Type Something…</string>
+    <string name="text_less_important">Less Important</string>
+    <string name="text_important">Important</string>
+    <string name="text_more_important">More Important</string>
+    <string name="text_bookmark_add">Add Bookmark</string>
+    <string name="text_bookmark_remove">Remove Bookmark</string>
+    <string name="text_groups">Groups</string>
+    <string name="text_error_title">Title is empty</string>
+    <string name="text_error_note">Note is empty</string>
+    <string name="text_menu_sorting">Sorting</string>
+    <string name="text_notes_empty">No Notes :(</string>
+    <string name="text_notes_empty_description">You have no task to do.</string>
+    <string name="text_notes_search_result">Not found.</string>
+</resources>
